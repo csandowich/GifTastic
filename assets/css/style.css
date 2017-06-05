@@ -1,0 +1,19 @@
+button {
+	padding:10px;
+	border-style: 1px solid 10px;
+	margin: 10px;
+	border-radius: 5px:
+}
+
+img {
+	display: inline-block;
+}
+.navbar{
+	background-color: black;
+}
+
+h1 {
+	text-align: center;
+	color: #DCDCDC !important;
+
+}
