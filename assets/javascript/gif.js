@@ -40,21 +40,9 @@ $(document).ready(function() {
 					$("#genteratedGifs").prepend(sportsDiv);
 
 
-					$(".gif").on("click", function() {
-						//this function should allow me to click on the gifs and play and pause them.
-						var $this = $(this)
-						var gifStatus = $this.attr("data-state");
-						if (gifStatus === "still") {
-							$this.attr("src", $this.attr("data-animate"));
-							$this.attr("data-state", "animate");
-						} else {
-							$this.attr("src", $this.attr("data-still"));
-							$this.attr("data-state", "still");
-						}
-
-					}); //end of .gif click function
-				} //end of k for loop.
-			}); //end of .done function
+					 
+				} 
+			}); 
 		}); //end of #button click function
 		$("#buttons").append(button);
 	};
@@ -79,6 +67,20 @@ $(document).ready(function() {
 		addButton(buttons[i]);
 		console.log(buttons);
 	}
+
+	$(document).on("click", '.gif', function() {
+						//this function should allow me to click on the gifs and play and pause them.
+						var $this = $(this)
+						var gifStatus = $this.attr("data-state");
+						if (gifStatus === "still") {
+							$this.attr("src", $this.attr("data-animate"));
+							$this.attr("data-state", "animate");
+						} else {
+							$this.attr("src", $this.attr("data-still"));
+							$this.attr("data-state", "still");
+						}
+
+					});
 
 	
 
